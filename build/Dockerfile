@@ -1,8 +1,8 @@
 # For build automation - Allows building from any ai-dock base image
-ARG IMAGE_BASE="ghcr.io/ai-dock/base-image:v2-cuda-12.1.1-base-22.04"
+ARG IMAGE_BASE="ghcr.io/joshrivers/aidock-base-image:v2-cuda-12.9.1-base-24.04"
 FROM ${IMAGE_BASE}
 
-LABEL org.opencontainers.image.source https://github.com/ai-dock/python
+LABEL org.opencontainers.image.source https://github.com/joshrivers/aidock-python
 
 LABEL org.opencontainers.image.description "Python development environment in a cloud-first docker container"
 
@@ -19,7 +19,7 @@ COPY --chown=0:1111 ./COPY_ROOT_0/ /
 # ENV for inheritance
 ARG PYTHON_VERSION=all
 ENV PYTHON_VERSION=${PYTHON_VERSION}
-ARG PYTHON_VENV_NAME=python_310
+ARG PYTHON_VENV_NAME=python_312
 ENV PYTHON_VENV_NAME=${PYTHON_VENV_NAME}
 ENV PYTHON_DEFAULT_VENV=${PYTHON_VENV_NAME}
 ENV OPT_SYNC=$OPT_SYNC

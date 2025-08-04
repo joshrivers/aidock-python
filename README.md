@@ -23,27 +23,20 @@ Tags follow these patterns:
 ##### _CUDA_
 - `:[python-version]-v2-cuda-[x.x.x]-[base|runtime|devel]-[ubuntu-version]`
 
-- `:latest-cuda` &rarr; `:3.10-v2-cuda-11.8.0-cudnn8-runtime-22.04`
-
-##### _ROCm_
-- `:[python-version]-v2-rocm-[x.x.x]-[core|runtime]-[ubuntu-version]`
-
-- `:latest-rocm` &rarr; `:3.10-v2-rocm-6.0-runtime-22.04`
-
-ROCm builds are experimental. Please give feedback.
+- `:latest-cuda` &rarr; `:3.12-v2-cuda-12.9.1-cudnn8--base-24.04`
 
 ##### _CPU_
 - `:[python-version]-v2-cpu-[ubuntu-version]`
 
-- `:latest-cpu` &rarr; `:3.10-v2-cpu-22.04`
+- `:latest-cpu` &rarr; `:3.12-v2-cpu-24.04`
 
 Browse [here](https://github.com/ai-dock/python/pkgs/container/python) for an image suitable for your target environment.
 
-Supported Python versions: `3.10`
+Supported Python versions: `3.12`
 
 Supported Platforms: `NVIDIA CUDA`, `AMD ROCm`, `CPU`
 
->[!NOTE]  
+>[!NOTE]
 >Recent builds include `v2` in their image tag.  These images use `venv` rather than `micromamba` for environment management.
 
 
@@ -64,10 +57,9 @@ Supported Platforms: `NVIDIA CUDA`, `AMD ROCm`, `CPU`
 
 ---
 
->[!NOTE]  
+>[!NOTE]
 >These templates are configured to use the `latest` tag but you are free to change to any of the available Python CUDA tags listed [here](https://github.com/ai-dock/python/pkgs/container/python)
 
 ---
 
 _The author ([@robballantyne](https://github.com/robballantyne)) may be compensated if you sign up to services linked in this document. Testing multiple variants of GPU images in many different environments is both costly and time-consuming; This along with [sponsorships](https://github.com/sponsors/ai-dock) helps to offset costs and further the development of the project_
-
