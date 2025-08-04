@@ -88,9 +88,9 @@ jobs:
         - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.8.1-base"}
         - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.8.1-cudnn-runtime"}
         - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.8.1-cudnn-devel"}
-        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.6.3-base"}
-        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.6.3-cudnn-runtime"}
-        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.6.3-cudnn-devel"}
+        # - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.6.3-base"}
+        # - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.6.3-cudnn-runtime"}
+        # - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.6.3-cudnn-devel"}
     steps:
       -
         name: Free Space
