@@ -5,10 +5,10 @@ env:
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows: ["Docker Build"]
-    types:
-      - completed
+  # workflow_run:
+  #   workflows: ["Docker Build"]
+  #   types:
+  #     - completed
 
 jobs:
   delete-untagged:
@@ -27,7 +27,7 @@ jobs:
               { per_page: ${{ env.PER_PAGE }}
             });
 
-            const pages = (function() { 
+            const pages = (function() {
                 if (typeof response.headers.link !== 'undefined') {
                 return response.headers.link.split(">").slice(-2)[0].split('=').slice(-1)[0]
                 }
@@ -35,16 +35,16 @@ jobs:
             })();
 
             console.log("Total pages: " + pages);
-            
+
             for (let page = pages; page >= 1; page--) {
               console.log("Processing page " + page)
-              
+
               const response = await github.request("GET /${{ env.OWNER }}/packages/container/${{ github.event.repository.name  }}/versions",
-              { 
+              {
                   per_page: ${{ env.PER_PAGE }},
                   page: page
               });
-              
+
               for (version of response.data) {
                 if (version.metadata.container.tags.length == 0) {
                     console.log("delete " + version.id)
@@ -53,4 +53,3 @@ jobs:
                 }
               }
             }
-            
