@@ -83,15 +83,14 @@ jobs:
       matrix:
         build:
         - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.9.1-base"}
-        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.9.1-cudnn8-runtime"}
-        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.9.1-cudnn8-devel"}
-        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.4.1-base"}
-        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.4.1-cudnn-runtime"}
-        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.4.1-cudnn-devel"}
-        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.1.1-base"}
-        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.1.1-cudnn8-runtime"}
-        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.1.1-cudnn8-devel"}
-
+        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.9.1-cudnn-runtime"}
+        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.9.1-cudnn-devel"}
+        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.8.1-base"}
+        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.8.1-cudnn-runtime"}
+        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.8.1-cudnn-devel"}
+        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.6.3-base"}
+        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.6.3-cudnn-runtime"}
+        - {latest: "false", python: "3.12", venv: "python_312", cuda: "12.6.3-cudnn-devel"}
     steps:
       -
         name: Free Space
